@@ -17,7 +17,7 @@ The default navigation code that was available by the selective process works go
 
 The condition is, if the sensor get the max value, it's because the robot is too close to the wall to move forward, then it will move backward:
 
-´´´
+```
 else if (sensor_value >= MAX_SENSOR_VALUE)
     stuck = 1;
 ...
@@ -37,23 +37,23 @@ else if (sensor_value >= MAX_SENSOR_VALUE)
           state = FORWARD;
         }
         break;
-´´´
+```
 
-![alt text](https://github.com/brenomec/robotic_challenge/stuck_robot.png?raw=true)
+![stuck_robot](https://github.com/brenomec/robotic_challenge/blob/master/stuck_robot.png)
 
 ### Object Detection
 
 A RGB camera was added on top of the robot and directed upward and forward. In the controller code, all the requisites were added and the objects numbereds. To be sure that the goal got recognized and not mistaken by another object, the recognize system of the Webots can distinguish the object and have sure what model it is seeing as the image above show.
 
-![alt text](https://github.com/brenomec/robotic_challenge/recognition_data.png?raw=true)
+![data](https://github.com/brenomec/robotic_challenge/blob/master/recognition_data.png)
 
 With the possibility of filtering the objects, it could be possible to make the stop as the robot reach the goal and detect the sign, as shown on the image above.
 
-![alt text](https://github.com/brenomec/robotic_challenge/recognited_sign.png?raw=true)
+![sign](https://github.com/brenomec/robotic_challenge/blob/master/recognited_sign.png)
 
 After get all the information and detection, the condition was implemented to just finish the mission, as seen in the code above.
 
-´´´
+```
 char stop[] = "stop panel";
 ...
       if (strcmp (stop,objects[i].model) == 0){
@@ -64,6 +64,6 @@ char stop[] = "stop panel";
           speed[0] = 0;
           speed[1] = 0;
         break;
-´´´
+```
 
 A MP4 file with the challenge being completed is available in the repository named as **robot_challenge.mp4**
