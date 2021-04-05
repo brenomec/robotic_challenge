@@ -19,6 +19,8 @@
                  3 LEDs are switched on and off periodically
  */
 
+//vscodetest
+
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
