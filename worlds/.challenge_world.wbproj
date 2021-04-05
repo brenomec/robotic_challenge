@@ -8,4 +8,4 @@ orthographicViewHeight: 1
 textFiles: 0 "controllers/challenge_controller/challenge_controller.c"
 globalOptionalRendering: DistanceSensorRays
 consoles: Console:All:All
-renderingDevicePerspectives: Pioneer 3-DX:camera;1;1.35938;0;0
+renderingDevicePerspectives: Pioneer 3-DX:camera;1;1.46094;0;0
